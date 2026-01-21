@@ -8,14 +8,6 @@
 }
 
 body {
-  max-width: 100%;
-  padding: 40px 85px;
-  @media screen and (max-width: 424px) {
-    padding: 24px 16px;
-  }
-  @media screen and (min-width: 425px) and (max-width: 767px) {
-    padding: 40px 32px;
-  }
   .header {
     max-width: 100%;
     .logo {
@@ -95,19 +87,9 @@ body {
     }
 
     .down {
-      @media screen and (max-width: 992px) {
-        flex-direction: column;
-      }
-
+      transform: translateY(-40px);
       .son {
-        @media screen and (min-width: 767px) and (max-width: 992px) {
-          flex-direction: row;
-        }
         .text {
-          @media screen and (min-width: 767px) and (max-width: 992) {
-            display: flex;
-            flex-direction: column;
-          }
           h2 {
             padding: 48px 0px 24px 0px;
             color: #333d4b;

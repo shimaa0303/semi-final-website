@@ -10,6 +10,9 @@
 body {
   .header {
     max-width: 100%;
+    padding-inline: clamp(16px, 5vw, 85px);
+    padding-top: clamp(24px, 4vw, 40px);
+
     .logo {
       img {
         width: clamp(160px, 1vw, 237px);
@@ -27,10 +30,12 @@ body {
     }
     .listBtn {
       width: 16px;
+      display: block;
     }
   }
   .heroSection {
-    padding-top: 40px;
+    padding-top: clamp(32px, 3vw, 40px);
+    padding-inline: clamp(16px, 4vw, 85px);
     .container {
       width: 100%;
       max-height: 584px;
@@ -108,6 +113,183 @@ body {
             color: #333d4b;
           }
         }
+      }
+    }
+  }
+  /* تنسيق السكشن الغامق */
+  .section-bg-dark {
+    background-color: #2c343e;
+    border-radius: 10px;
+    margin: 0 20px;
+    padding-top: 80px;
+    padding-bottom: 150px; /* مساحة داخلية عشان الكروت تاخد راحتها */
+    position: relative;
+  }
+
+  .section-header {
+    margin-bottom: 60px;
+  }
+
+  .display-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .description {
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+
+  /* تنسيق الكروت وحركتها للخارج */
+  .cards-container {
+    margin-bottom: -220px; /* سحب الكروت لأسفل خارج السكشن */
+  }
+
+  .coffee-card {
+    background-color: #0e8784;
+    padding: 45px 30px;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .card-icon {
+    width: 65px;
+    margin-bottom: 30px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  
+  @media (max-width: 991px) {
+    .section-bg-dark {
+      padding-bottom: 250px;
+    }
+    .cards-container {
+      margin-bottom: -350px;
+    }
+    .coffee-card {
+      flex-direction: row; /* الأيقونة بجانب النص */
+      text-align: left;
+      padding: 35px;
+    }
+    .card-icon {
+      margin-bottom: 0;
+      margin-right: 25px;
+      width: 50px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .coffee-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .card-icon {
+      margin-bottom: 25px;
+      margin-right: 0;
+    }
+  }
+  .bottom-spacer {
+    height: 200px;
+  }
+  @media (max-width: 991px) {
+    .bottom-spacer {
+      height: 380px;
+    }
+  }
+  .section4 {
+    width: 1110px;
+    max-width: 100%;
+    padding: 140px 85px;
+
+    .content {
+      img {
+        width: 1047px;
+        max-width: 90%;
+        padding-bottom: 64px;
+        @media screen and (max-width: 767px) {
+          content: url(./img3.png);
+          max-width: 100%;
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          content: url(./img22.png);
+          max-width: 95%;
+        }
+      }
+    }
+  }
+  button {
+    max-width: 218px;
+    height: 57px;
+    border-radius: 6px;
+    padding: 16px 32px;
+    color: #fefcf7;
+    background-color: #0e8784;
+    border: none;
+    display: block;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .footer {
+    padding: 40px 0;
+
+    .container {
+      background-color: #333d4b;
+      max-width: 1280px;
+      width: 90%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 241px;
+      flex-grow: 1;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        padding: 40px 43px;
+        gap: 0;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        padding: 40px 40px 20px;
+        gap: 73.5px;
+      }
+
+      .logo {
+        h3 {
+          width: clamp(137.05px, 1vw, 203px);
+          color: white;
+          font-family: fraunces;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .nav {
+        width: clamp(257px, 4vw, 281px);
+        display: flex;
+        font-family: Barlow;
+        color: #83888f;
+        gap: clamp(20px, 5vw, 32px);
+        flex-direction: row;
+        font-size: 12px;
+
+        @media screen and (max-width: 767px) {
+          padding: 24px 0;
+        }
+      }
+      .social {
+        width: clamp(100px, 1vw, 120px);
+      
+    
       }
     }
   }
